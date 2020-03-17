@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>太极图</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: rgb(210, 210, 210);
+      }
+      @keyframes go {
+        from {
+          transform: rotate(0 deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      #bg-wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #bg {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        animation: 10s go linear infinite;
+        box-shadow: 6px 8px 18px 8px rgba(0, 0, 0, 0.75);
+      }
+      @media (max-width: 500px) {
+        #bg {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      #bg > div:first-child {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background: black;
+      }
+      #bg > div:nth-child(2) {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        background-color: white;
+      }
+      #bg > div:nth-child(3) {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 25%;
+        border-radius: 50%;
+        background: black;
+      }
+      #bg > div:nth-child(4) {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        border-radius: 50%;
+        background: white;
+      }
+      #bg > div:nth-child(5) {
+        height: 10%;
+        width: 10%;
+        position: absolute;
+        left: 45%;
+        top: 20%;
+        border-radius: 50%;
+        background: white;
+      }
+      #bg > div:nth-child(6) {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        left: 45%;
+        bottom: 20%;
+        border-radius: 50%;
+        background: black;
+      }
+      #txt {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg-wrapper">
+      <div id="bg">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div id="txt">
+        人道渺渺,仙道茫茫，
+      </div>
+    </div>
+  </body>
+</html>
